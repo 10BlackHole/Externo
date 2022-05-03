@@ -1,0 +1,118 @@
+\documentclass[letterpaper, onecolumn, 12pt]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{graphicx}
+%\usepackage{wrapfig}
+\usepackage{hyperref}
+%\usepackage{marginnote}
+\usepackage{physics}
+%\usepackage{cancel}
+%\usepackage{subfig}
+\usepackage{caption}
+\spanishdecimal{.}
+
+%\renewcommand*{\marginnotevadjust}{-0.1cm}
+%\renewcommand*{\marginfont}{\footnotesize}
+%\usepackage[right=4.5cm,left=2cm,top=3cm,bottom=3.0cm]{geometry}
+\renewcommand{\theenumi}{\alph{enumi}}
+\usepackage[right=3.0cm,left=1.20cm,top=1.5cm,bottom=1.5cm]{geometry}
+
+\hypersetup{colorlinks=true, linkcolor=red}
+\begin{document}
+\sffamily
+
+\title{\vspace{-10mm} Tarea Lya}
+
+\author{Borja Diez\\
+         }% <-this % stops a space
+
+\makeatletter
+\def\@maketitle{
+\begin{center}
+{\Huge \bfseries \sffamily \@title }\\[4ex]
+Entregado el: \@date\\
+{\normalsize \@author}\\[4ex]
+%\@date\\[8ex]
+\end{center}}
+\makeatother
+
+%maketitle
+\section*{Problema 1}
+
+
+Calculemos primero la derivada parcial de $r$ con respecto a $x$ e $y$:
+\begin{align*}
+\frac{\partial r}{\partial x}=\frac{\partial}{\partial x}[(x^2+y^2)^{1/2}]=\frac{2x}{2}(x^2+y^2)^{-1/2}=\frac{2x}{2\sqrt{x^2+y^2}}=\frac{x}{\sqrt{x^2+y^2}}
+\end{align*}
+
+\begin{align*}
+    \frac{\partial r}{\partial y}=\frac{\partial}{\partial y}[(x^2+y^2)^{1/2}]=\frac{2y}{2}(x^2+y^2)^{-1/2}=\frac{2y}{2\sqrt{x^2+y^2}}=\frac{y}{\sqrt{x^2+y^2}}
+\end{align*}
+    
+Luego
+\begin{align*}
+    \left(\pdv{r}{x}\right)^2+\left(\pdv{r}{y}\right)^2&=\left(\frac{x}{\sqrt{x^2+y^2}}\right)^2+\left(\frac{y}{\sqrt{x^2+y^2}}\right)^2\\
+    &=\frac{x^2}{x^2+y^2}+\frac{y^2}{x^2+y^2}\\
+    &=\frac{x^2+y^2}{x^2+y^2}\\
+    &=1
+\end{align*}
+Así
+\begin{equation}\label{con1}
+    \boxed{\left(\pdv{r}{x}\right)^2+\left(\pdv{r}{y}\right)^2=1}
+\end{equation}
+
+Calculemos ahora las segundas derivadar parciales de $r$ con respcto a $x$ e $y$
+\begin{align*}
+    \pdv[2]{r}{x}&=\frac{\partial}{\partial x}\left[\frac{x}{\sqrt{x^2+y^2}}\right]\\
+    &=\frac{\sqrt{x^2+y^2}-x\frac{x}{\sqrt{x^2+y^2}}}{x^2+y^2}\\
+    &=\frac{\sqrt{x^2+y^2}-\frac{x^2}{\sqrt{x^2+y^2}}}{x^2+y^2}\\
+    &=\frac{\frac{x^2+y^2-x^2}{\sqrt{x^2+y^2}}}{x^2+y^2}\\
+    &=\frac{y^2}{(x^2+y^2)\sqrt{x^2+y^2}}
+\end{align*}
+
+De manera similar tenemos
+\begin{align*}
+    \pdv[2]{r}{y}=\frac{\partial}{\partial y}\left[\frac{y}{\sqrt{x^2+y^2}}\right]=\frac{x^2}{(x^2+y^2)\sqrt{x^2+y^2}}
+\end{align*}
+Luego,
+\begin{align*}
+    \pdv[2]{r}{x}+\pdv[2]{r}{y}&=\frac{y^2}{(x^2+y^2)\sqrt{x^2+y^2}}+\frac{x^2}{(x^2+y^2\sqrt{x^2+y^2})}\\
+    &=\frac{x^2+y^2}{(x^2+y^2)\sqrt{x^2+y^2}}\\
+    &=\frac{1}{\sqrt{x^2+y^2}}\\
+    &=\frac{1}{r}
+\end{align*}
+Es decir,
+\begin{equation}\label{con2}
+    \boxed{\pdv[2]{r}{x}+\pdv[2]{r}{y}=\frac{1}{r}}
+\end{equation}
+
+Calculemos ahora las segundas derivadas parciales de $u$ con respecto a $x$ e $y$
+\begin{align*}
+    \pdv{u}{x}=\pdv{u}{r}\pdv{r}{x}=f'(r)\pdv{r}{x}
+\end{align*}
+Luego 
+\begin{align}
+    \nonumber \pdv[2]{u}{x}=\frac{\partial}{\partial x}\left[f'(r)\pdv{r}{x}\right]&=\pdv{f'(r)}{x}\pdv{r}{x}+f'(r)\pdv[2]{r}{x}\\ 
+   \nonumber &=\pdv{r}{x}\pdv{f'(r)}{r}\pdv{r}{x}+f'(r)\pdv[2]{r}{x}\\ 
+    &=f''(r)\left(\pdv{r}{x}\right)^2+f'(r)\pdv[2]{r}{x} \label{1}
+\end{align}
+De manera similar tenemos
+\begin{equation}\label{2}
+    \pdv[2]{u}{y}=f''(r)\left(\pdv{r}{y}\right)^2+f'(r)\pdv[2]{r}{y}
+\end{equation}
+Sumando (\ref{1}) y (\ref{2}) obtenemos
+\begin{align*}
+    \pdv[2]{u}{x}+\pdv[2]{u}{y}&=f''(r)\left(\pdv{r}{x}\right)^2+f'(r)\pdv[2]{r}{x}+f''(r)\left(\pdv{r}{y}\right)^2+f'(r)\pdv[2]{r}{y}\\
+    &=f''(r)\left[\left(\pdv{r}{x}\right)^2+\left(\pdv{r}{y}\right)^2\right] + f'(r)\left[\pdv[2]{r}{x}+\pdv[2]{r}{y}\right]
+\end{align*}
+Utilizando (\ref{con1}) y (\ref{con2}) tenemos
+\begin{equation*}
+   \boxed{\pdv[2]{u}{x}+\pdv[2]{u}{y}=f''(r)+\frac{1}{r}f'(r)}
+\end{equation*}
+
+\section*{Problema 2}
+\begin{equation}
+    \pdv{x}{y}
+\end{equation}
+\end{document}

@@ -5,7 +5,7 @@ while (N <= 0):
 A = []
 for i in range(0, N):
     a = int(input("Ingrese un 0 si es vacío o un 1 si es ocupado: "))
-    if (a!=0 or a!=1):
+    if (a!=0 and a!=1):
         a = int(input("Error, ingrese un 0 si es vacío o un 1 si es ocupado: ")) 
     A.append(a)
 

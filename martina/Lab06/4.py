@@ -1,11 +1,10 @@
 from numpy import sqrt
  
 def distancia(a,b):
-    resta = 0
+    dif = 0
     for i in range(3):
-        resta = resta + (a[i] - b[i])
-    distancia = sqrt(resta**2)
-    return distancia
+        dif = dif + (b[i] - a[i])**2
+    return sqrt(dif)
 
 P1 = []
 P2 = []

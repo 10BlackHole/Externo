@@ -1,0 +1,44 @@
+\begin{problema}
+Dos cilindros largos (radio $a$ y $b$) estan separados por un materia con conductividad $\sigma$. Si estan mantenidos a una diferencia de potencial $V$, ¿qúe corriente fluye de uno hacia el otro, en una longitud $L$?
+\end{problema}
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[scale=0.5]{fig/02.png}
+		\caption{}
+		\label{}
+	\end{center}	
+\end{figure}
+
+\begin{sol}
+\end{sol}
+
+Por ley de Gauss, el campo generado por el cilinro en para $r>a$ es
+\begin{equation}
+	\vb*{E}=\frac{\lambda}{2\pi \epsilon_0 r}\vu*{r}
+\end{equation}
+Notar que es tambien es el campo entre ambos cilindros.
+
+La corriente viene dada por
+\begin{align}
+	I=\int\vb*{J}\cdot \dd\vb*{a}&=\sigma\int\vb*{E}\cdot \dd \vb*{a}\\
+														 &=\frac{\sigma}{\epsilon_0}\lambda L\\
+														 &=\frac{\lambda}{2\pi \epsilon_0}\int_{-L/2}^{L/2}\int_0^{2\pi}\frac{s}{s}\dd\phi\dd z\\
+														 &=\frac{\sigma \lambda L}{\epsilon_0}
+\end{align}
+
+La diferencia de potencual entre los cilindros es
+\begin{align}
+	V&=-\int_b^{a}\vb*{E}\cdot \dd \vb*{l}\\
+	 &=\frac{\lambda}{2\pi\epsilon_0}\int_{a}^b\frac{\dd s}{s}\\
+	 &=\frac{\lambda}{2\pi\epsilon_0}\ln\left(\frac{b}{a}\right)
+\end{align}
+Despejando $\lambda$
+\begin{equation}
+	\lambda=\frac{2\pi\epsilon_0}{ln(b/a)}V
+\end{equation}
+
+Reemplazando en la expresión para la corriente obtenemos
+\begin{equation}
+	\boxed{I=\frac{2\pi \sigma L}{ln(b/a)}V}
+\end{equation}
+

@@ -1,0 +1,36 @@
+%\section{Problema 2}
+\begin{problema}
+Un cable muy delgado transporta una corriente constante $I$, conectando los centros de dos placas circulares de radio $R$, tal como se indica en la figura. Suponga que la separación entre las placas $w$ es muy pequeña ($w<<R$), que en todo momento la densidad de carga $\sigma(t)$ sobre las placas es uniforme,  y que $\sigma (t=0)=0$. Realizando todas las aproximaciones e idealizaciones que considere pertinentes, calucule:
+\begin{enumerate}
+	\item El valor de la densidad de carga $\sigma(t)$ sobre las placas
+	\item El campo eléctrico entre las placas,  como función del tiempo $t$
+	\item El valor campo magnético $B(\rho, t)$ a una distancia $\rho <R$ del eje del sistema, entre las placas
+	\item Bosqueje los campos $\vec{E}$ y $\vec{B}$ entre las placas 
+\end{enumerate}
+\end{problema}
+
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[scale=0.5]{fig/01.png}
+	\end{center}
+\end{figure}
+
+\begin{sol}
+\end{sol}
+\begin{enumerate}
+	\item Como $\sigma(t=0)=0$ y se supone que esta densidad de carga es constante sobre la superficie, entonces tenemos que esta no tiene dependencia espcial. Así 
+		\begin{equation}\label{sigma}
+			\boxed{			\sigma(t) = \frac{Q}{A} = \frac{It}{\pi R^2}}
+		\end{equation}
+	\item Supongamamos $\vb*{E}=E\vu*{z}$, homogéneo entre las placas y nulo en otros lados. Además recoerdemos que la magnitud de campo eléctico generado por una placa infinita es $E=\sigma/2\epsilon_0$ (Ley de Gauss, el área encerrada por una cara de la superficie gaussiana cilindrica es la mita de la carga total de la placa). Sin embargo, como queremos calcular el campo eléctrico entre las placas, este será la suma del generado por la placa izquerda (positiva) y la derecha (negativa), por lo tanto tenemos que el campo eléctrico entre las placas es
+	\begin{equation}
+		\vb*{E}(t)=\frac{\sigma(t)}{\epsilon_0}\vu*{z}
+	\end{equation}
+	Reemplazando (\ref{sigma})
+	\begin{equation}
+		\boxed{		\vb*{E}(t)=\frac{It}{\epsilon_0 \pi R^2}\vu*{z}}
+	\end{equation}
+\end{enumerate}
+
+
+

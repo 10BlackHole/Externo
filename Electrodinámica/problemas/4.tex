@@ -1,0 +1,32 @@
+\begin{problema}
+	Find the charge and current distributions that would give rise to the potentials
+\begin{equation}
+	V=0,\quad \vb{A}=\frac{\mu_0k}{4c}(ct-|x|)^2\vu{z}, |x|<ct, 0, |x|>ct
+\end{equation}
+\end{problema}
+
+First we'll determine the electric and magnetic fields
+\begin{equation}
+	\vb{E}=-\pdv{\vb{A}}{t}=-\frac{\mu_0l}{2}(ct-|x|)\vb{z}
+\end{equation}
+\begin{equation}
+	\vb{B}=\nabla\times\vb{A}=-\frac{\mu_0k}{4c}\frac{\partial}{\partial x}(ct-|x|)^2\vu{y}=\pm\frac{\mu_0k}{2c}(ct-|x|)\vu{y}
+\end{equation}
+Calculating every derivative in sight. I find
+\begin{equation}
+	\nabla\cdot\vb{E}=0,\quad \nabla\cdot\vb{B}=0,\quad \nabla\times\vb{E}=\mp\frac{\mu_0k}{2}\vu{y},\quad \nabla\times\vb{B}=-\frac{\mu_0k}{2c}\vu{z}
+\end{equation}
+\begin{equation}
+	\pdv{\vb{E}}{t}=-\frac{\mu_0kc}{2}\vu{z},\quad \pdv{\vb{B}}{t}=\pm\frac{\mu_0k}{2}\vu{y}
+\end{equation}
+As you can easily check, Maxwell's equations are all satisfied, with $\rho$ and $\vb{J}$ both \textit{zero}. Notice, however, that $\vb{B}$ has a discontinuity at $x=0$, and this signals the presence of a surface current $\vb{K}$ in the $yz$ plane;
+\begin{equation}
+	kt\vu{y}=\vb{K}\times\vu{x}
+\end{equation}
+and hence
+\begin{equation}
+	\vb{K}=kt\vu{z}
+\end{equation}
+Evidently we have here a uniform surface current flowing in the $z$ direction over the plane $x=0$, which starts up at $t=0$, and increases in proportion to $t$. Notice that the news travels out (in both directions) at the spped of light: for points $|x|>ct$ the message (the current is now flowing) has not yet arrived, so the fields are zero.
+
+
